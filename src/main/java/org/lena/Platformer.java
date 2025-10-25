@@ -8,6 +8,9 @@ public class Platformer extends Game {
         this.obstacleName = obstacleName;
     }
 
+    public Platformer() {
+    }
+
     public String getObstacleName() {
         return obstacleName;
     }
@@ -15,6 +18,7 @@ public class Platformer extends Game {
     public void setObstacleName(String obstacleName) {
         this.obstacleName = obstacleName;
     }
+
     @Override
     public String toString() {
         return "Platformer {" +
@@ -23,5 +27,10 @@ public class Platformer extends Game {
                 ", difficulty=" + this.getDifficultyLevel() +
                 ", obstacle='" + this.obstacleName + '\'' +
                 '}';
+    }
+
+    @Override
+    void printIntroMessage() {
+        System.out.println("Welcome to the " + this.getName() + " Platformer! Your main obstacle would be the " + this.getObstacleName() + "!");
     }
 }

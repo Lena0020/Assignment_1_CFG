@@ -11,6 +11,12 @@ public abstract class Game {
         this.name = name;
     }
 
+    public Game() {
+
+    }
+
+    abstract void printIntroMessage();
+
     public String getName() {
         return name;
     }
